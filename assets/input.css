@@ -5,9 +5,9 @@
 
 @font-face {
     font-family: "Kanit";
-    src: url('/assets/font/Kanit-Bold.ttf');
+    src: url('/assets/font/Kanit-Regular.ttf');
 }
-body {
+body,html {
     font-family: "Kanit";
 }
 .full-screen {
