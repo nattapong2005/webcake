@@ -13,14 +13,32 @@
     <nav class="bg-white w-full">
         <div class="mx-auto py-4 max-w-screen-xl flex flex-wrap items-center justify-between">
             <div class="flex items-center space-x-3 rtl:space-x-reverse gap-4">
+                <button id="toggle" class="lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-menu">
+                        <line x1="4" x2="20" y1="12" y2="12" />
+                        <line x1="4" x2="20" y1="6" y2="6" />
+                        <line x1="4" x2="20" y1="18" y2="18" />
+                    </svg>
+                </button>
                 <a class="flex items-center space-x-3">
                     <img src="/assets/img/logo.png" class="h-12">
                     <div>
                         <h1 class="self-center text-2xl whitespace-nowrap">WebCake</h1>
                     </div>
                 </a>
-                <div class="flex items-center space-x-3">
-                    <a href="" class="flex items-center">
+                <div id="menu"
+                    class="hidden fixed inset-y-0 left-0 w-64 bg-white mt-4 p-4 lg:w-auto lg:realative lg:space-x-3 lg:flex lg:mt-0 lg:p-0 lg:static">
+                    <button id="close" class="lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-x">
+                            <path d="M18 6 6 18" />
+                            <path d="m6 6 12 12" />
+                        </svg>
+                    </button>
+                    <a href="" class="flex items-center mb-4 lg:mb-0">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
                             class="lucide lucide-house">
@@ -30,7 +48,7 @@
                         </svg>
                         <span class="ms-3">Home</span>
                     </a>
-                    <a href="" class="flex items-center">
+                    <a href="" class="flex items-center mb-4 lg:mb-0">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
                             class="lucide lucide-package">
@@ -42,7 +60,7 @@
                         </svg>
                         <span class="ms-3">Products</span>
                     </a>
-                    <a href="" class="flex items-center">
+                    <a href="" class="flex items-center mb-4 lg:mb-0">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
                             class="lucide lucide-phone">
@@ -113,7 +131,7 @@
     <!-- First Section -->
     <section class="container flex flex-col items-center justify-center max-w-screen-xl mx-auto pb-10">
         <h1 class="text-2xl font-medium text-center mt-5 mb-5">สินค้าพรีเมี่ยม</h1>
-        <div class="grid grid-cols-4 gap-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             <div class="max-w-sm rounded-md overflow-hidden shadow-md bg-white">
                 <img src="https://images.pexels.com/photos/1702373/pexels-photo-1702373.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                     class="w-full h-80 object-cover">
@@ -153,7 +171,7 @@
 
     <section class="container flex flex-col items-center justify-center max-w-screen-xl mx-auto pb-10">
         <h1 class="text-2xl font-medium text-center mb-5">สินค้าขายดี</h1>
-        <div class="grid grid-cols-5 gap-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             <div class="max-w-sm rounded-md overflow-hidden shadow-md bg-white">
                 <img src="https://images.pexels.com/photos/2531546/pexels-photo-2531546.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                     class="w-full h-80 object-cover">
@@ -196,13 +214,13 @@
             </div>
         </div>
     </section>
-    
+
 
     <!-- =================================================================================== -->
 
     <section class="container flex flex-col items-center justify-center max-w-screen-xl mx-auto pb-10">
         <!-- <h1 class="text-2xl font-bold text-center">ที่ผมจะขายที่วิลัย</h1> -->
-        <div class="grid grid-cols-5 gap-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             <div class="max-w-sm rounded-md overflow-hidden shadow-md bg-white">
                 <img src="https://images.pexels.com/photos/1727415/pexels-photo-1727415.jpeg?auto=compress&cs=tinysrgb&w=600"
                     class="w-full h-80 object-cover">
@@ -245,24 +263,43 @@
             </div>
         </div>
     </section>
-    
+
 
     <!-- Recommend Section -->
 
     <section class="container flex flex-col justify-center max-w-screen-xl mx-auto">
         <div class="flex justify-evenly items-center mb-5 bg-gradient-to-r from-white to-orange-200">
-          <div >
-        <h1 class="text-3xl">สินค้าแนะนำ</h1>
-        <p>เค้กสุดอร่อย ได้รางวัลชนะเลิศจาก การประกวดเค้กดีเด่น 2024 <br>
-        เชิญชวนมาลิ้มลองกันได้แล้ววันนี้</p>
-        <button class="mt-2 bg-red-500 text-white font-normal py-2 px-4 rounded hover:bg-red-700">สั่งซื้อเลยตอนนี้</button>
-    </div>
-            <img class="h-auto w-[35%]" src="https://www.waynik.com/media/catalog/product/cache/8cedae9787f811c4b75c7dfd4bd8a808/o/r/orange_velvet.png" alt="">
-        </div
-    </section>
+            <div>
+                <h1 class="text-3xl">สินค้าแนะนำ</h1>
+                <p>เค้กสุดอร่อย ได้รางวัลชนะเลิศจาก การประกวดเค้กดีเด่น 2024 <br>
+                    เชิญชวนมาลิ้มลองกันได้แล้ววันนี้</p>
+                <button
+                    class="mt-2 bg-red-500 text-white font-normal py-2 px-4 rounded hover:bg-red-700">สั่งซื้อเลยตอนนี้</button>
+            </div>
+            <img class="h-auto w-[35%]"
+                src="https://www.waynik.com/media/catalog/product/cache/8cedae9787f811c4b75c7dfd4bd8a808/o/r/orange_velvet.png"
+                alt="">
+        </div </section>
 
 
 
+        <script>
+
+            document.getElementById('toggle').addEventListener('click', function () {
+
+                const menu = document.getElementById('menu');
+                menu.classList.toggle('hidden');
+
+            });
+
+            document.getElementById('close').addEventListener('click', function () {
+
+                const menu = document.getElementById('menu');
+                menu.classList.add('hidden');
+
+            });
+
+        </script>
 
 </body>
 
