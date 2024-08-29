@@ -16,5 +16,6 @@
 ## Sitemap
 ```mermaid 
 graph LR 
-A(Home) --> B(Product) --> C(About)
+A(Home) --> B(Product)
+A --> C(About)
 ```
